@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Todolist from './components/TodoList';
+import NewTodo from './components/NewTodo';
+// function App() {
+//   return (
+//     <div className="App">
+      
+//     </div>
+//   );
+// }
+
+const App:React.FC = () => {
+	const todos = [{id:'t1', text:'Tyepscrtコースの完了'}];
+
+	return (
+	  <div className="App">
+		  <NewTodo/>
+		  <Todolist items={todos}/>
+		
+	  </div>
+	);
 }
+  
 
 export default App;
