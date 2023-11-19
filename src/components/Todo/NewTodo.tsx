@@ -1,8 +1,13 @@
-import React, { useRef,ReactEventHandler } from 'react'
+import React, { useRef } from 'react'
 
-const NewTodo:React.FC = () =>{
-	//ここにはdomオブジェクトが入る(初期値はnull)
+type NewTodoProps = {
+    onAddTodo: (todoText: string) => void;
+};
+
+export const NewTodo: React.FC<NewTodoProps> = (props: NewTodoProps) => {
 	const textInputRef= useRef<HTMLInputElement>(null)
+
+	console.log(textInputRef)
 
 	const todoSubmitHunder = (event:React.FormEvent) =>{
 		event.preventDefault();
@@ -10,7 +15,7 @@ const NewTodo:React.FC = () =>{
 		//このフォームをサブミットした時点で、必ず入力はされているのでcurretnがnullということはない。
 		//ので、!マークをつける。
 		const enterdText = textInputRef.current!.value
-		console.log(enterdText)
+		props.onAddTodo(enterdText)
 	}
 
 
@@ -25,4 +30,3 @@ const NewTodo:React.FC = () =>{
 	)
 }
 
-export default NewTodo
