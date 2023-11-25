@@ -1,13 +1,12 @@
 import React from 'react';
-import {RouterConfig} from './router'
+import { RouterConfig } from './router';
 
-const App:React.FC = () => {
-	return (
-	  <div className="App">
-			<RouterConfig />
-	  </div>
-	);
-}
-  
+const App: React.FC = () => {
+    return (
+        <div className="App">
+            <RouterConfig />
+        </div>
+    );
+};
 
 export default App;

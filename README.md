@@ -1,3 +1,17 @@
+# プロジェクトスタート
+
+```
+yarn start
+```
+
+# コード整形
+
+設定は.prettierrc に記載
+
+```
+yarn prettier --write src
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
